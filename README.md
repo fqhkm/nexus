@@ -1,58 +1,62 @@
-# CakePHP Application Skeleton
+Hi Sir, here is the live link for my project. I deployed it using InfinityFree because the system is built with PHP. Since GitHub Pages only supports static sites and doesn't run .php files, I had to use an external host to keep the website functional. Thank you!
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=5.x)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%208-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+https://fqhkm.page.gd/
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 5.x.
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+Project Title "Nexus Student Portal"
 
-## Installation
+## 📝 Project Description
+The Nexus Student Portal is a centralized, web-based student information management platform developed using a rapid-development PHP framework. The portal streamlines the user onboarding process by enabling synchronized account creation and academic profiling through a single gateway. Designed with a premium dark-mode interface, the application is fully optimized for production deployment in cloud hosting environments, ensuring high responsiveness, strict data privacy, and a modern user experience.
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
 
-If Composer is installed globally, run
+## ⚡ Features Included
 
-```bash
-composer create-project --prefer-dist cakephp/app
-```
+### 1. Dual-Table Synchronized Registration
+* **Single-Form Onboarding:** Users only need to fill out a single intuitive form to simultaneously create their portal credentials and complete their academic profiles.
+* **Automated Relational Mapping:** Upon submission, the system executes a secure transaction that maps account credentials (`username`, `email`, `password`) into the `users` table, while automatically linking and saving academic profile details (`name`, `student_id`, `ic_number`, `faculty`, `course`, `semester`) into the `students` table using a relational Foreign Key (`user_id`).
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
+### 2. Premium Dark Mode UI/UX
+* **Modern Aesthetic:** Built using the premium *Plus Jakarta Sans* typography paired with a deep navy visual palette and vibrant neon blue accent glows to minimize user eye strain during extended use.
+* **Responsive Architecture:** Fully responsive layout integrated with *Font Awesome 6* iconography, ensuring a seamless visual experience across smartphones, tablets, and desktop computers.
 
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
+### 3. Automated Cryptographic Password Hashing
+* **Bcrypt Protection:** To adhere to standard information security awareness protocols, plain-text passwords are automatically intercepted at the entity level and processed using the robust Bcrypt hashing algorithm (`DefaultPasswordHasher`) before being stored in the database, protecting student data against potential data breaches.
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+### 4. Custom Session & Personalized Experience
+* **State Management:** Utilizes a secure stateful authentication plugin to manage active user sessions and protect restricted student directories from unauthorized access.
+* **Dynamic Data Rendering:** Features personalized dashboard greetings that dynamically extract data from the authenticated session entity to welcome the student by name (e.g., *"Welcome back, [Student Name]"*).
 
-```bash
-bin/cake server -p 8765
-```
+### 5. Production-Ready Deployment Optimization
+* **Error Level Filtering:** Configured at the local application level (`app_local.php`) to suppress non-breaking syntax notices and deprecation warnings typical of shared hosting environments, ensuring a clean, polished user interface on the live server.
 
-Then visit `http://localhost:8765` to see the welcome page.
+---
 
-## Demo app
+## 🛠️ Frameworks / Libraries Used
+* **Backend Framework:** CakePHP 5.x (Rapid Development PHP Framework)
+* **Database Management System:** MySQL / MariaDB
+* **Security Module:** CakePHP Authentication Plugin (Bcrypt Hashing Component)
+* **Frontend Design:** Custom CSS3 Media Queries & Premium Dark Mode Components
+* **Typography & Icons:** Google Fonts (Plus Jakarta Sans) & Font Awesome 6 Icons
+* **Hosting Platform:** InfinityFree Web Hosting (Apache Server Environment)
 
-Check out the [5.x-demo branch](https://github.com/cakephp/app/tree/5.x-demo), which contains demo migrations and a seeder.
-See the [README](https://github.com/cakephp/app/blob/5.x-demo/README.md) on how to get it running.
+---
 
-## Update
+## 🔑 Instructions to Test Login
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+Follow these step-by-step instructions to test the registration and authentication flow of the portal:
 
-## Configuration
+1. **Navigate to the Sign Up Page:**
+   * Access the portal's registration URL (e.g., `/users/signup` or `/users/add`).
+   * Complete all fields under the **Account Details** and **Student Information** sections.
+   * Click the **"Register New Account"** button. The system will create records in both tables simultaneously.
 
-Read and edit the environment specific `config/app_local.php` and set up the
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
+2. **Access the Login Page:**
+   * You will be automatically redirected, or you can manually navigate to the login interface (e.g., `/users/login`).
 
-## Layout
+3. **Enter Test Credentials:**
+   * **Username / Email:** *(Enter the username or email address registered in Step 1)*
+   * **Password:** *(Enter the plain-text password chosen during registration)*
 
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+4. **Verify Authentication Success:**
+   * Click **Login**. The system will verify the password against the encrypted hash in the database.
+   * Upon successful verification, you will be redirected to the secure **Student Dashboard**, where a personalized welcome message will dynamically display your registered name at the top of the portal.
