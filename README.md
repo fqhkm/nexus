@@ -19,14 +19,11 @@ The Nexus Student Portal is a centralized, web-based student information managem
 * **Modern Aesthetic:** Built using the premium *Plus Jakarta Sans* typography paired with a deep navy visual palette and vibrant neon blue accent glows to minimize user eye strain during extended use.
 * **Responsive Architecture:** Fully responsive layout integrated with *Font Awesome 6* iconography, ensuring a seamless visual experience across smartphones, tablets, and desktop computers.
 
-### 3. Automated Cryptographic Password Hashing
-* **Bcrypt Protection:** To adhere to standard information security awareness protocols, plain-text passwords are automatically intercepted at the entity level and processed using the robust Bcrypt hashing algorithm (`DefaultPasswordHasher`) before being stored in the database, protecting student data against potential data breaches.
-
-### 4. Custom Session & Personalized Experience
+### 3. Custom Session & Personalized Experience
 * **State Management:** Utilizes a secure stateful authentication plugin to manage active user sessions and protect restricted student directories from unauthorized access.
 * **Dynamic Data Rendering:** Features personalized dashboard greetings that dynamically extract data from the authenticated session entity to welcome the student by name (e.g., *"Welcome back, [Student Name]"*).
 
-### 5. Production-Ready Deployment Optimization
+### 4. Production-Ready Deployment Optimization
 * **Error Level Filtering:** Configured at the local application level (`app_local.php`) to suppress non-breaking syntax notices and deprecation warnings typical of shared hosting environments, ensuring a clean, polished user interface on the live server.
 
 ---
